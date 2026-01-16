@@ -1,0 +1,6 @@
+date,amount,description,account,category
+2025-01-01,50000,Monthly Salary,Bank,Income
+2025-01-02,-1200,Uber Ride,Credit Card,Transport
+2025-01-03,-3500,Grocery Store,Bank,Food
+2025-01-05,-1500,Netflix Subscription,Credit Card,Entertainment
+2025-01-07,-800,Electricity Bill,Bank,Utilities
