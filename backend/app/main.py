@@ -1,14 +1,13 @@
 from fastapi import FastAPI
+from backend.app.api import metrics
+from backend.app.core.database import Base, engine
 
-app = FastAPI(
-    title="FinScope API",
-    description="Personal Finance Analytics Platform",
-    version="0.1.0"
-)
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI(title="FinScope API")
+
+app.include_router(metrics.router)
 
 @app.get("/")
-def health_check():
-    return {
-        "status": "ok",
-        "service": "FinScope API"
-    }
+def root():
+    return {"status": "ok", "service": "FinScope API"}
